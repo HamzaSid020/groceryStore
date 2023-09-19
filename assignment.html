@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juice Shop</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <script src ="js/app.js"></script>
+    <h1> Welcome to our Juice Shop!</h1><br>
+    <div class="row">
+        <div class="column">
+            <h2>Give yourself a boost!</h2>
+            <h3 id="apple">Apple Juice &nbsp&nbsp&nbsp&nbsp-&nbsp $5 &nbsp&nbsp</h3>
+            <button onclick="AddApple()">Add to cart</button><br>
+            <h3 id="banana">Banana Juice &nbsp-&nbsp $7 &nbsp&nbsp</h3>
+            <button onclick="AddBanana()">Add to cart</button><br>
+            <h3 id="grape">Grape Juice &nbsp&nbsp&nbsp-&nbsp $4  &nbsp&nbsp</h3>
+            <button onclick="AddGrape()">Add to cart</button><br>
+            <h3 id="peach">Peach Juice &nbsp&nbsp&nbsp&nbsp-&nbsp $3 &nbsp&nbsp</h3>
+            <button onclick="AddPeach()">Add to cart</button><br>
+            <h3 id="orange">Orange Juice &nbsp&nbsp-&nbsp $8  &nbsp</h3>
+            <button onclick="AddOrange()">Add to cart</button><br>
+            <button style="margin: 10px;" onclick="Checkout()" >Checkout</button><br>
+        </div>
+        
+        <div class="column">
+            <h2>Receipt</h2>
+            <h2 id="customer"></h2>
+            <div class="table">
+                <table id="myTable"></table>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

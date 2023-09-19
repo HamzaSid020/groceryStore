@@ -1,0 +1,42 @@
+body{
+    background-color: ghostwhite;
+}
+
+h1{
+    color:black;
+    text-align: center;
+}
+
+div{
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 50%;
+    border-style: dotted solid ;
+    padding-left: 10px;
+    margin: 10px;
+    
+}
+
+.row:after {
+    display: table;
+    
+}
+
+h3 {
+    display: inline-block;
+  }
+
+table {
+    border-collapse: collapse;
+    width: 30%;
+}
+table,td,th{
+    border: 3px solid black;
+}
+td,th{
+    padding: 8px; 
+    text-align: left;
+}
