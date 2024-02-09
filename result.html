@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Define document metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garage Sale</title>
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+  </head>
+  <body>
+    <!-- Include an external JavaScript file for functionality -->
+    <script src="js/app1.js"></script>
+    <h1>Conestoga Garage Sale</h1>
+    <h2>Raising money for The Frontline Fund</h2>
+    <br />
+    <div class="column">
+      <div class="row">
+        <div class="column">
+          <form class="form" >
+            <h2>Thank you for your purchase!</h2>
+            <table>
+              <tr>
+                <th>Name</th>
+                <td id="nameData"></td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td id="emailData"></td>
+              </tr>
+              <tr>
+                <th>Credit Card</th>
+                <td id="creditNumberData"></td>
+              </tr>
+            </table>
+          <table>
+              <br>
+              <thead>
+
+              <tr>
+                <th>Item</th>
+                <th>Quantity </th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+            </tr>
+          </thead>
+          <tbody id="quantityTable">
+        </tbody>
+
+              <!-- Add more rows for other fields as needed -->
+            </table>
+            <br /><br />
+            <button type="button" name="checkout" onclick="Reset()">
+              Reset
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  </html>

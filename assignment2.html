@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Define document metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garage Sale</title>
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" type="text/css" href="style1.css" />
+  </head>
+  <body>
+    <!-- Include an external JavaScript file for functionality -->
+    <script src="js/app1.js"></script>
+    <!-- Page header -->
+    <h1>Conestoga Garage Sale</h1>
+    <!-- Subtitle -->
+    <h2>Raising money for The Frontline Fund</h2>
+    <br />
+    <div class="row">
+      <div class="column">
+        <!-- Start of the user input form -->
+        <form class="form" action="result.html" method="GET">
+          <!-- Input field for user's name -->
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="First Last"
+            required
+          />
+          <br />
+          <!-- Input field for user's email address -->
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="email@domain.com"
+            required
+          />
+          <br />
+          <!-- Input field for credit card number -->
+          <label for="creditNumber">Credit Card Number</label>
+          <input
+            type="text"
+            id="creditNumber"
+            name="creditNumber"
+            placeholder="xxxx-xxxx-xxxx-xxxx"
+            required
+          />
+          <br />
+          <!-- Input field for credit card expiry month -->
+          <label for="expiryMonth">Credit Card Expiry Month</label>
+          <!-- Dropdown list for month selection -->
+          <datalist id="monthList">
+            <option value="JAN"></option>
+            <option value="FEB"></option>
+            <option value="MAR"></option>
+            <option value="APR"></option>
+            <option value="MAY"></option>
+            <option value="JUN"></option>
+            <option value="JUL"></option>
+            <option value="AUG"></option>
+            <option value="SEP"></option>
+            <option value="OCT"></option>
+            <option value="NOV"></option>
+            <option value="DEC"></option>
+          </datalist>
+          <input
+            type="search"
+            id="expiryMonth"
+            name="expiryMonth"
+            placeholder="MMM"
+            list="monthList"
+            required
+          />
+          <br />
+          <!-- Input field for credit card expiry year -->
+          <label for="expiryYear">Credit Card Expiry Year</label>
+          <input
+            type="text"
+            id="expiryYear"
+            name="expiryYear"
+            placeholder="yyyy"
+            required
+          />
+          <br />
+          <!-- Header for grocery quantity section -->
+          <h3><b>Buy generously</b></h3>
+          <!-- Input fields for various grocery items and their quantities -->
+          <label for="water">Number of Water Bottles ($5)</label>
+          <input type="text" id="water" name="water" placeholder="10" /><br />
+          <label for="caps">Number of Caps ($20)</label>
+          <input type="text" id="caps" name="caps" placeholder="10" /><br />
+          <label for="pens">Number of Pens ($2)</label>
+          <input type="text" id="pens" name="pens" placeholder="10" /><br />
+          <label for="candy">Number of Candy Bags ($10)</label>
+          <input type="text" id="candy" name="candy" placeholder="10" /><br />
+          <label for="cupcake">Number of Cup Cakes ($3)</label>
+          <input
+            type="text"
+            id="cupcake"
+            name="cupcake"
+            placeholder="10"
+          /><br />
+          <br />
+          <!-- Submit button for checkout -->
+          <button type="submit" name="checkout" onclick="return validateForm();">
+            Checkout
+          </button>
+          <!-- Error messages for form validation -->
+          <div id="emailErrorMessage"></div>
+          <div id="expiryMonthErrorMessage"></div>
+          <div id="expiryYearErrorMessage"></div>
+          <div id="creditNumberErrorMessage"></div>
+          <div id="groceryErrorMessage"></div>
+        </form>
+        <!-- End of the user input form -->
+      </div>
+    </div>
+  </body>
+</html>

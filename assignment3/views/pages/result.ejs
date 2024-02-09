@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Document information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garage Sale</title>
+    <!-- Link to a style file for a nice look -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+
+  <body>
+    <h1>Welcome to My Online Store</h1>
+    <!-- Subtitle -->
+    <h2>Don't miss out! Our prices are awesome!</h2>
+    <br />
+    <div class="column">
+      <div class="row">
+        <div class="column">
+          <!-- Form for handling user data -->
+          <form class="form" action="/reset" method="POST" reset>
+            <!-- Thank you message for shopping -->
+            <h2>Thank you for shopping with us!</h2>
+            <!-- Table for displaying user information -->
+            <table>
+              <!-- Rows for user details -->
+              <tr>
+                <th>Name</th>
+                <td id="nameData"><%= name %></td>
+              </tr>
+              <tr>
+                <th>Email</th>
+                <td id="emailData"><%= email %></td>
+              </tr>
+              <tr>
+                <th>Phone Number</th>
+                <td id="phoneNumberData"><%= phoneNumber %></td>
+              </tr>
+              <tr>
+                <th>Address</th>
+                <td id="addressData"><%= address %></td>
+              </tr>
+              <tr>
+                <th>City</th>
+                <td id="cityData"><%= city %></td>
+              </tr>
+              <tr>
+                <th>Province</th>
+                <td id="provinceData"><%= province %></td>
+              </tr>
+            </table>
+            <!-- Table for displaying purchased items -->
+            <table>
+              <br />
+              <thead>
+                <!-- Table header for items -->
+                <tr>
+                  <th>Item</th>
+                  <th>Quantity</th>
+                  <th>Unit Price</th>
+                  <th>Total Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Rows for individual items and their quantities -->
+                <tr>
+                  <td>Pens</td>
+                  <td><%= pens.quantity || 0 %></td>
+                  <td>$5.00</td>
+                  <td>$<%= pens.total || 0 %></td>
+                </tr>
+                <tr>
+                  <td>Candy</td>
+                  <td><%= candy.quantity || 0 %></td>
+                  <td>$10.00</td>
+                  <td>$<%= candy.total || 0 %></td>
+                </tr>
+                <tr>
+                  <td>Cupcake</td>
+                  <td><%= cupcake.quantity || 0 %></td>
+                  <td>$5.00</td>
+                  <td>$<%= cupcake.total || 0 %></td>
+                </tr>
+              </tbody>
+            </table>
+            <br /><br />
+            <!-- Table for displaying total amounts and tax information -->
+            <table>
+              <!-- Rows for total amounts and tax information -->
+              <tr>
+                <th>Total Amount (before tax)</th>
+                <td id="totalAmount"><%= totalAmount %></td>
+              </tr>
+              <tr>
+                <th>Tax Amount</th>
+                <td id="tax"><%= tax %></td>
+              </tr>
+              <tr>
+                <th>Total Amount (after tax)</th>
+                <td id="totalTaxAmount"><%= taxAmount %></td>
+              </tr>
+            </table>
+            <!-- Additional space for better formatting -->
+            <br /><br />
+            <!-- Reset button to clear the form -->
+            <button type="button" name="checkout">Reset</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

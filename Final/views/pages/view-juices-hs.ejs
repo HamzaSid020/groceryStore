@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head-hs'); %>
+
+  <body>
+    <div class="container">
+      <% if (isAdmin) { %> <%- include('../partials/admin-header-hs'); %> <% } else
+      { %> <%- include('../partials/header-hs'); %> <% } %>
+
+      <main>
+        <h2>List of Orders:</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <h3>Name</h3>
+              </th>
+              <th>
+                <h3>Phone Number</h3>
+              </th>
+              <th>
+                <h3>Mango Juices</h3>
+              </th>
+              <th>
+                <h3>Berry Juices</h3>
+              </th>
+              <th>
+                <h3>Apple Juices</h3>
+              </th>
+              <th>
+                <h3>Sub Total</h3>
+              </th>
+              <th>
+                <h3>Tax(13%)</h3>
+              </th>
+              <th>
+                <h3>Total</h3>
+              </th>
+              <th>
+                <h3>Manage</h3>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% AllInfo_hs.forEach(order => { %>
+            <tr>
+              <td><%= order.name %></td>
+              <td><%= order.phoneNumber %></td>
+              <td><%= order.mangoQuantity %></td>
+              <td><%= order.berryQuantity %></td>
+              <td><%= order.appleQuantity %></td>
+              <td><%= order.subTotal %></td>
+              <td><%= order.tax %></td>
+              <td><%= order.totalCost %></td>
+              <td>
+                <!-- Delete form -->
+                <form action="/delete-page" method="post" style="border: 0px">
+                  <input type="hidden" name="_id" value="<%= order._id %>" />
+                  <button type="submit" class="delete-button">Delete</button>
+                </form>
+              </td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </main>
+      <%- include('../partials/footer-hs'); %>
+    </div>
+  </body>
+</html>

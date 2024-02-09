@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head-hs'); %>
+
+  <body>
+    <div class="container">
+      <% if (isAdmin) { %> <%- include('../partials/admin-header-hs'); %> <% } else
+      { %> <%- include('../partials/header-hs'); %> <% } %>
+
+      <main>
+        <form action="/submit-form" method="post">
+          <h1>Order Juices</h1>
+          <!-- Name -->
+          <div class="input-container">
+            <label for="name*">Name:*</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value="<%= inputValues.name || '' %>"
+            />
+            <% if (errors.name) { %>
+            <p class="error-message"><%= errors.name %></p>
+            <% } %>
+          </div>
+          <!-- Phone Number -->
+          <div class="input-container">
+            <label for="phoneNumber*">Phone Number:*</label>
+            <input
+              type="text"
+              id="phoneNumber"
+              name="phoneNumber"
+              placeholder="xxx-xxx-xxxx"
+              value="<%= inputValues.phoneNumber || '' %>"
+            />
+            <% if (errors.phoneNumber) { %>
+            <p class="error-message"><%= errors.phoneNumber %></p>
+            <% } %>
+          </div>
+          <!-- Mango Juices -->
+          <div class="input-container">
+            <label for="mangoJuices">Mango Juices:</label>
+            <input
+              type="text"
+              id="mangoJuices"
+              name="mangoJuices"
+              value="0"
+            />
+          </div>
+          <!-- Berry Juices -->
+          <div class="input-container">
+            <label for="berryJuices">Berry Juices:</label>
+            <input
+              type="text"
+              id="berryJuices"
+              name="berryJuices"
+              value="0"
+            />
+          </div>
+          <!-- Apple Juice -->
+          <div class="input-container">
+            <label for="appleJuice">Apple Juice:</label>
+            <input
+              type="text"
+              id="appleJuice"
+              name="appleJuice"
+              value="0"
+            />
+          </div>
+          <% if (errors.quantity) { %>
+          <p class="error-message"><%= errors.quantity %></p>
+          <% } %>
+          <!-- Submit Button -->
+          <button class="submit-button" type="submit">Submit</button>
+        </form>
+      </main>
+      <%- include('../partials/footer-hs'); %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<header>
+  <img src="public\img\website-logo.jpg" alt="Logo" />
+  <h1>Fashion Store</h1>
+  <h3>Welcome Admin!</h3>
+</header>
+<nav>
+  <a href="/home">HOME</a>
+  <div class="dropdown">
+    <span style="cursor: pointer">ALL PAGES</span>
+    <div class="dropdown-content">
+      <% if (pageTitles && pageTitles.length) { %>
+      <% pageTitles.forEach((pageTitle) => { %>
+      <% const sanitizedPageTitle = pageTitle.toLowerCase().replace(/\s+/g, '-'); %>
+      <% if (pageTitle !== 'Home') { %>
+      <a href="/<%= sanitizedPageTitle %>"><%= pageTitle %></a>
+      <% } %>
+      <% }); %>
+      <% } %>
+    </div>
+    <a href="/edit-page">EDIT PAGE</a>
+    <a href="/new-page">NEW PAGE</a>
+    <a href="/logout">LOG OUT</a>
+</nav>
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    background-color: #34495e;
+    color: #fff;
+  }
+
+  header img {
+    height: 80px;
+    /* Adjust the height as needed */
+    margin-right: 50px;
+    margin-left: 50px;
+  }
+
+  header h1 {
+    margin-left: 250px;
+  }
+
+  header h3 {
+    float: right;
+    margin-left: 350px;
+  }
+
+  nav {
+    text-align: center;
+    background-color: #34495e;
+    padding: 10px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 50px;
+  }
+
+  .dropdown {
+    display: inline-block;
+    color: white;
+  }
+
+  .dropdown {
+    display: inline-block;
+    color: white;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    min-width: 50px;
+    z-index: 1;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 5px;
+    margin: 12px;
+    display: block;
+    text-decoration: none;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>

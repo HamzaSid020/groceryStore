@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conestoga Market</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Include JavaScript file -->
+    <script src="js/app1.js"></script>
+    <main>
+      <header>
+        <!-- Site logo and title -->
+        <img
+          id="logo"
+          src="img/conestoga_market.jpg"
+          alt="conestoga market logo"
+        />
+        <h1>Conestoga Market</h1>
+      </header>
+      <nav class="navigate">
+        <ul>
+          <!-- Navigation links -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </nav>
+      <section class="container">
+        <form class="form">
+          <!-- Thank you message for shopping -->
+          <h2>Thank you for shopping with us!</h2>
+          <!-- Table to display customer information -->
+          <table>
+            <tr>
+              <th>Name</th>
+              <td id="nameData"></td>
+            </tr>
+            <tr>
+              <th>PhoneNumber</th>
+              <td id="phoneNumber"></td>
+            </tr>
+            <tr>
+              <th>Province</th>
+              <td id="province"></td>
+            </tr>
+          </table>
+          <table>
+            <br />
+            <thead>
+              <!-- Table headers for purchased items -->
+              <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total Price</th>
+              </tr>
+            </thead>
+            <!-- Table body for displaying purchased items -->
+            <tbody id="quantityTable"></tbody>
+            <!-- You can add more rows for other fields as needed -->
+          </table>
+          <br />
+        </form>
+      </section>
+      <footer id="footer">
+        <!-- Footer content with copyright information -->
+        <p>&copy;Hamza - hsiddiqui6061@conestoga.on.ca 2023</p>
+      </footer>
+    </main>
+  </body>
+</html>

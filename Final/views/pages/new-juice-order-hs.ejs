@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head-hs'); %>
+
+<body>
+    <div class="container">
+        <% if (isAdmin) { %>
+            <%- include('../partials/admin-header-hs'); %>
+        <% } else { %>
+            <%- include('../partials/header-hs'); %>
+        <% } %>
+
+        <main>
+            <br>
+            <br>
+            <div class="juice-order-box">
+                <h2>Thank you for your order!</h2>
+                <h3>Here are your order details:</h3>
+
+                <div class="order-details">
+                    <% if (orderDetails_hs) { %>
+                        <p><strong>Name:</strong> <%= orderDetails_hs.name %></p>
+                        <p><strong>Phone Number:</strong> <%= orderDetails_hs.phoneNumber %></p>
+                        <p><strong>Mango Juices:</strong> <%= orderDetails_hs.mangoQuantity %></p>
+                        <p><strong>Berry Juices:</strong> <%= orderDetails_hs.berryQuantity %></p>
+                        <p><strong>Apple Juices:</strong> <%= orderDetails_hs.appleQuantity %></p>
+                        <p><strong>Sub Total:</strong> $<%= orderDetails_hs.subTotal %></p>
+                        <p><strong>Tax (13%):</strong> $<%= orderDetails_hs.tax %></p>
+                        <p><strong>Total:</strong> $<%= orderDetails_hs.totalCost %></p>
+                    <% } else { %>
+                        <p>No order details found for the provided ID.</p>
+                    <% } %>
+                </div>
+            </div>
+        </main>
+        <%- include('../partials/footer-hs'); %>
+    </div>
+</body>
+
+</html>

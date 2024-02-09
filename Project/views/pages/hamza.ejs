@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head', { pageTitle: pageData.pageTitle }); %>
+
+<body>
+    <div class="container">
+
+        <%- include('../partials/header'); %>
+
+        <main>
+            <img src="<%= pageData.imgSrc %>" alt="Main Image">
+            <%- pageData.body %>
+        </main>
+        <%- include('../partials/footer'); %>
+    </div>
+</body>
+
+</html>

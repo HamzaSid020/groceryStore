@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/new-edit-page-head'); %>
+
+<body>
+    <div class="container">
+        <%- include('../partials/admin-header'); %>
+
+        <main>
+            <div class="new-page-container">
+                <h1>Edit Page</h1>
+
+                <!-- Form for updating a page -->
+                <form action="/submit-update-page" method="POST" enctype="multipart/form-data">
+                    <!-- Add an input field for pageId -->
+                    <input type="hidden" id="pageId" name="pageId" value="<%= pageData._id %>">
+                    <!-- Container for Page Title and Input -->
+                    <div class="title-input-container">
+                        <label for="pageTitleText">Page Title: </label>
+                        <input type="text" id="pageTitleText" name="pageTitleText" value="<%= pageData.pageTitle %>">
+                    </div>
+                    <br>
+                    <!-- Container for Hero Image Input and Browse Button -->
+                    <div class="file-input-container">
+                        <label for="heroImage">Hero Image: </label>
+                        <input type="text" id="heroImage" name="heroImage" readonly value="<%= pageData.imgSrc %>">
+                        <input type="file" id="imageUpload" name="imageUpload" accept="image/*" onchange="updateImageTextbox()">
+                        <label for="imageUpload" class="browse-button">Browse</label>
+                    </div>
+                    <div class="page-content-container">
+                        <textarea id="pageContent" name="pageContent"><%= pageData.body %></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+                <!-- End of Form -->
+
+            </div>
+        </main>
+        <%- include('../partials/footer'); %>
+        
+        <script>
+            function updateImageTextbox() {
+                const input = document.getElementById('imageUpload');
+                const textbox = document.getElementById('heroImage');
+                textbox.value = input.files.length > 0 ? input.files[0].name : '';
+            }
+        </script>
+    </div>
+</body>
+
+</html>

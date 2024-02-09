@@ -1,0 +1,218 @@
+main {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 80px;
+  height: auto;
+  padding-left: 500px;
+  margin-right: 20px;
+}
+
+#main-pic {
+  max-width: 50%;
+  height: auto;
+}
+
+.navigate {
+  background-color: rgb(0, 12, 101);
+  overflow: hidden;
+}
+
+.navigate ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navigate li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.navigate li a {
+  display: block;
+  margin: 10px;
+  background-color: rgb(0, 12, 101);
+  color: white;
+  text-decoration: none;
+  font-size: large;
+  padding: 10px 20px;
+}
+
+.navigate li a:hover {
+  background-color: lightblue;
+  color: white;
+}
+
+.sidebar li a {
+  display: block;
+  float: left;
+  color: rgb(0, 12, 101);
+  text-decoration: none;
+}
+
+.sidebar li a:hover {
+  color: white;
+}
+
+.sidebar ul {
+  list-style-type: none;
+}
+
+header h1 {
+  padding: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  align-items: center;
+}
+article h1 {
+  font-size: 30px;
+  font-family: sGeorgia, "Times New Roman", Times, serif;
+  margin: 0;
+}
+
+#footer {
+  background: rgb(0, 12, 101);
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.header {
+  background: lightgray;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sidebar {
+  flex: 1;
+  background: lightgray;
+  padding: 20px;
+  list-style-type: none;
+}
+
+.content {
+  flex: 2;
+  background: lightgray;
+  padding: 20px;
+}
+
+.container {
+  background: lightgray;
+}
+
+.content {
+  text-align: left;
+  font-size: 25px;
+}
+
+.sidebar div {
+  width: 300px;
+  border: 2px solid;
+  padding: 10px;
+  box-shadow: 6px 4px 8px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.sidebar_item {
+  width: 50%;
+}
+
+.more_info_btn {
+  border: none;
+  background-color: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.more_info_btn:hover {
+  color: rgb(0, 12, 101);
+  text-decoration: underline;
+}
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+form {
+  align-content: center;
+  padding: 20px;
+}
+
+form div input {
+  width: 20px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.minus_btn .plus_btn {
+  margin: 0px;
+  padding: 0px;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+  font-size: 17px;
+}
+
+.checkout_item {
+  width: 5%;
+  /* height:90px; */
+  transform: scale(0.6);
+  margin-bottom: 0px;
+}
+
+td,
+th {
+  padding: 10px;
+}
+
+table {
+  font-size: 20px;
+}
+
+.item {
+  padding: 20px;
+}
+
+#sunglass_hidden_info,
+#tshirt_hidden_info,
+#cap_hidden_info {
+  display: none;
+}
+table,
+th,
+td {
+  border: 3px solid black;
+}

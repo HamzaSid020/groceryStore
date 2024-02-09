@@ -18,7 +18,7 @@ function AddToCart(quantity, index) {
 function AddApple()
 {
    let quantity =  prompt('Enter the quantity required? ');
-   while (isNaN(quantity) || quantity == false) {
+   while ( isNaN(quantity) || quantity == false) {
         quantity =  prompt('Please enter a number only');
    }
    if( quantity != null)

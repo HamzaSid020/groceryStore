@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conestoga Market</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="js/app.js"></script>
+    <main>
+      <header>
+        <!-- Logo and site title -->
+        <img
+          id="logo"
+          src="img/conestoga_market.jpg"
+          alt="conestoga market logo"
+        />
+        <h1>Conestoga Market</h1>
+      </header>
+      <nav class="navigate">
+        <ul>
+          <!-- Navigation links -->
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+        </ul>
+      </nav>
+      <section class="container">
+        <aside class="sidebar">
+          <!-- Sidebar menu -->
+          <h2 id="heading">Menu</h2>
+          <ul>
+            <li>
+              <div>
+                <h2>Caps</h2>
+                <img class="sidebar_item" src="img/cap.png" alt="cap" />
+                <p><b>Price</b> - $10.00/cap</p>
+                <p id="cap_info">
+                  This cap is made of pure...<button
+                    class="more_info_btn"
+                    onclick="moreInfo('cap')"
+                  >
+                    More Info
+                  </button>
+                </p>
+                <p id="cap_hidden_info">
+                  Step up your style with our trendy caps. Designed for those
+                  who dare to be different, our caps blend fashion and function
+                  effortlessly. From classic to contemporary, our collection
+                  caters to every taste. Top off your look with one of our
+                  premium caps and make a statement wherever you go!<button
+                    class="more_info_btn"
+                    onclick="lessInfo('cap')"
+                  >
+                    Less Info
+                  </button>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>Tshirt</h2>
+                <img class="sidebar_item" src="img/tshirt.png" alt="Tshirt" />
+                <p><b>Price</b> - $15.00/t-shirt</p>
+                <p id="tshirt_info">
+                  Elevate your fashion game with...<button
+                    class="more_info_btn"
+                    onclick="moreInfo('tshirt')"
+                  >
+                    More Info
+                  </button>
+                </p>
+                <p id="tshirt_hidden_info">
+                  Elevate your fashion game with our exclusive collection of
+                  T-shirts. Crafted for the style-savvy, our tees combine
+                  quality, comfort, and trendsetting designs. Embrace the world
+                  of possibilities and express your unique personality through
+                  our diverse range of T-shirts. Find your style statement
+                  now!<button
+                    class="more_info_btn"
+                    onclick="lessInfo('tshirt')"
+                  >
+                    Less Info
+                  </button>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <h2>Sunglasses</h2>
+                <img
+                  class="sidebar_item"
+                  src="img/sun_glasses.png"
+                  alt="sunglasses"
+                />
+                <p><b>Price</b> - $35/sunglass</p>
+                <p id="sunglass_info">
+                  Discover our curated collection..<button
+                    class="more_info_btn"
+                    onclick="moreInfo('sunglass')"
+                  >
+                    More Info
+                  </button>
+                </p>
+                <p id="sunglass_hidden_info">
+                  Discover our curated collection of sunglasses that blend
+                  fashion and protection. From classic aviators to trendy
+                  wayfarers, find your perfect shades for any occasion. Enjoy
+                  100% UV protection with style.<button
+                    class="more_info_btn"
+                    onclick="lessInfo('sunglass')"
+                  >
+                    Less Info
+                  </button>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </aside>
+        <article class="content">
+          <!-- Main content -->
+          <h1>Information</h1>
+          <br />
+          <img id="main-pic" src="img/clothes.jpg" alt="Home page background" />
+          <br />
+          <p>
+            Welcome to Conestoga Market, your ultimate fashion destination where
+            a world of style, choice, and limitless possibilities await. We
+            invite you to embark on a captivating journey through our extensive
+            collection, ranging from the coziest T-Shirts to the trendiest
+            Jackets, from fashionable Caps to exquisite Bracelets, and from
+            sophisticated Sunglasses to artful designs.
+            <br />
+            <br />
+            Our mission is simple: to help you unleash your inner fashion icon
+            and elevate your style game. We're not just about clothing; we're
+            about self-expression, confidence, and making a statement. Here,
+            fashion becomes a powerful medium to convey your unique personality.
+            <br />
+            <br />
+            As you step into our fashion realm, be prepared to immerse yourself
+            in the latest trends and timeless classics. Our curated selection
+            knows no bounds, ensuring that you discover the perfect pieces that
+            resonate with your individuality. At Conestoga Market, we celebrate
+            diversity, self-expression, and the art of dressing to impress.
+            Welcome to a world where fashion dreams become a stunning reality
+            &ndash; we're here to make you look and feel exceptional.
+          </p>
+        </article>
+      </section>
+      <footer id="footer">
+        <!-- Footer content -->
+        <p>&copy;2023 - Hamza hsiddiqui6061@conestoga.on.ca </p>
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+/* Styling for the entire page */
+body {
+    background-color: white; /* Background color is set to white */
+    font-family: Arial, Helvetica, sans-serif; /* Font family for the entire page */
+  }
+  
+  /* Styling for heading elements (h1 and h2) */
+  h1,
+  h2 {
+    color: #000; /* Text color is black */
+    text-align: center; /* Center-align the text */
+  }
+  
+  /* Styling for all div elements */
+  div {
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  /* Styling for columns using the class 'column' */
+  .column {
+    display: flex; /* Use flexbox for a flexible container */
+    justify-content: center; /* Center-align content horizontally within the container */
+  }
+  
+  /* Styling for forms */
+  form {
+    align-content: center; /* Center-align the content */
+    padding: 20px; /* Add padding around the form */
+    border: solid; /* Add a solid border */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 5px 5px 5px 5px #888888; /* Add a box shadow for a subtle 3D effect */
+  }
+  
+  /* Styling for labels */
+  label {
+    display: inline-block; /* Make labels inline-block elements */
+    width: 200px; /* Set a fixed width for labels */
+    text-align: left; /* Align text to the left within labels */
+  }
+  
+  /* Styling for inputs and labels */
+  input,
+  label {
+    margin-top: 10px; /* Add margin at the top of inputs and labels */
+    padding: 10px; /* Add padding around inputs and labels */
+  }
+  
+  /* Styling for level 3 headings (h3) */
+  h3 {
+    text-align: center; /* Center-align the text */
+  }
+  
+  /* Styling for elements with the class 'error-messages' */
+  .error-messages {
+    outline: 2px solid red; /* Add a red outline to highlight error messages */
+  }
+  
+  /* Styling for buttons */
+  button {
+    background: #000; /* Background color is black */
+    color: #fff; /* Text color is white */
+    border: 1px solid #eee; /* Add a border with a light color */
+    width: 100%; /* Set the width to 100% */
+    padding: 5px; /* Add padding around the button */
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 5px 5px 5px #eee; /* Add a box shadow for a subtle 3D effect */
+    text-shadow: none; /* Remove text shadow */
+  }
+  
+  /* Styling for button hover state */
+  button:hover {
+    background: grey; /* Change the background color on hover to grey */
+    color: #000; /* Change the text color on hover to black */
+    border: 1px solid #eee; /* Change the border color on hover to a light color */
+    width: 100%; /* Set the width to 100% on hover */
+    padding: 5px; /* Add padding around the button on hover */
+    border-radius: 10px; /* Add rounded corners on hover */
+    box-shadow: 5px 5px 5px #eee; /* Add a box shadow for a subtle 3D effect on hover */
+  }
+  
+  /* Styling for tables */
+  table {
+    border-collapse: collapse; /* Collapse the borders of the table */
+    width: 100%; /* Set the width to 100% */
+  }
+  
+  /* Styling for table headers (th) and table cells (td) */
+  th,
+  td {
+    border: 3px solid black; /* Add a solid border to th and td elements */
+    padding: 5px; /* Add padding around th and td elements */
+    text-align: middle; /* Center-align text within th and td elements */
+  }
+  

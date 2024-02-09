@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/new-edit-page-head'); %>
+
+<body>
+    <div class="container">
+        <%- include('../partials/admin-header'); %>
+
+        <main>
+            <div class="new-page-container">
+                <h1>Add New Page</h1>
+
+                <!-- Form for adding a new page -->
+                <form action="/submit-new-page" method="POST" enctype="multipart/form-data">
+                    <!-- Container for Page Title and Input -->
+                    <div class="title-input-container">
+                        <label for="pageTitleText">Page Title: </label>
+                        <input type="text" id="pageTitleText" name="pageTitleText">
+                    </div>
+                    <br>
+                    <!-- Container for Hero Image Input and Browse Button -->
+                    <div class="file-input-container">
+                        <label for="heroImage">Hero Image: </label>
+                        <input type="text" id="heroImage" name="heroImage" readonly>
+                        <input type="file" id="imageUpload" name="imageUpload" accept="image/*" onchange="updateImageTextbox()">
+                        <label for="imageUpload" class="browse-button">Browse</label>
+                    </div>
+                    <div class="page-content-container">
+                        <textarea id="pageContent" name="pageContent"></textarea>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-button">Submit</button>
+                </form>
+                <!-- End of Form -->
+
+            </div>
+        </main>
+        <%- include('../partials/footer'); %>
+        
+        <script>
+            function updateImageTextbox() {
+                const input = document.getElementById('imageUpload');
+                const textbox = document.getElementById('heroImage');
+                textbox.value = input.files.length > 0 ? input.files[0].name : '';
+            }
+        </script>
+    </div>
+</body>
+
+</html>

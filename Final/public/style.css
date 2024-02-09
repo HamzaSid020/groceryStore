@@ -1,0 +1,180 @@
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+main {
+    text-align: center;
+    padding: 20px 0;
+    min-height: 500px;
+}
+
+.login-box {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 200px;
+}
+
+.juice-order-box {
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 200px;
+}
+
+.login-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.login-input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF9F33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #FF7909;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    font-weight: bold;
+}
+
+th h3 {
+    text-decoration: underline;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.delete-button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #FF9F33;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.delete-button:hover {
+    background-color: #FF7909;
+    color: black;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid black; 
+    padding: 10px; 
+}
+
+h1 {
+    text-align: center;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 35px;
+}
+
+input {
+    width: calc(100% - 10px); /* Subtract 10px to account for padding */
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+/* Style for placing labels on the left and input boxes on the right */
+label {
+    float: left;
+    clear: left;
+    width: 40%; /* Adjust the width as needed */
+}
+
+input {
+    float: right;
+    width: 55%; /* Adjust the width as needed */
+    margin-left: 5%; /* Add some space between label and input */
+}
+
+.submit-button {
+    padding: 10px 20px;
+    background-color: #FF9F33;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 15px;
+    width: 100%;}
+    
+.submit-button:hover {
+    background-color: #FF7909;
+    color: black;
+}
+
+.order-details {
+    text-align: left;
+}
+
+.order-details p {
+    margin-left: 20px; /* Adjust the margin as needed */
+}
+
+.error-message {
+    color: red;
+    font-size: 12px; /* Adjust the font size as needed */
+  }

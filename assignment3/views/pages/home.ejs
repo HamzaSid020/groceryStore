@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Document setup -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garage Sale</title>
+    <!-- Connect to the style file for a nice look -->
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+  </head>
+
+  <body>
+    <!-- Page heading -->
+    <h1>Welcome to My Online Store</h1>
+    <!-- Subheading -->
+    <h2>Great deals await you! Check them out!</h2>
+    <br />
+    <div class="row">
+      <div class="column">
+        <!-- Start of the order form -->
+        <form class="form" action="/process-form" method="POST">
+          <!-- Field for user's name -->
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="First Last"
+            required
+          />
+          <br />
+          <!-- Field for user's email -->
+          <label for="email">Your Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="email@domain.com"
+            required
+          />
+          <br />
+          <!-- Field for phone number -->
+          <label for="phoneNumber">Your Phone Number</label>
+          <input
+            type="text"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="(xxx)xxxxxxx"
+            required
+          />
+          <br />
+          <!-- Field for address -->
+          <label for="address">Your Address</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Address"
+            required
+          />
+          <br />
+          <!-- Field for city -->
+          <label for="city">Your City</label>
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="City"
+            required
+          />
+          <br />
+          <label for="province">Your Province</label>
+          <!-- Dropdown for province selection -->
+          <datalist id="provinceList">
+            <option value="AB"></option>
+            <option value="BC"></option>
+            <option value="MB"></option>
+            <option value="NB"></option>
+            <option value="NL"></option>
+            <option value="NS"></option>
+            <option value="ON"></option>
+            <option value="QC"></option>
+            <option value="SK"></option>
+          </datalist>
+          <input
+            type="search"
+            id="province"
+            name="province"
+            placeholder="Select"
+            list="provinceList"
+            required
+          />
+          <br />
+
+          <!-- Header for product selection -->
+          <h3><b>Product Options:</b></h3>
+          <!-- Quantity fields for various items -->
+          <label for="pens">Number of Pens ($5 each)</label>
+          <input type="text" id="pens" name="pens" placeholder="1" /><br />
+          <label for="candy">Number of Candy Bags ($10 each)</label>
+          <input type="text" id="candy" name="candy" placeholder="1" /><br />
+          <label for="cupcake">Number of Cupcakes ($5 each)</label>
+          <input
+            type="text"
+            id="cupcake"
+            name="cupcake"
+            placeholder="1"
+          /><br />
+          <br />
+          <!-- Button to complete the order -->
+          <button type="submit" name="checkout">Complete Order</button>
+          <br />
+          <!-- Display error messages if any -->
+          <% let errors = locals.errors || []; %> <% if (errors.length > 0) { %>
+          <div class="error-messages">
+            <p>Errors:</p>
+            <% errors.forEach(error => { %>
+            <p>> <%= error %></p>
+            <% }); %>
+          </div>
+          <% } %>
+        </form>
+        <!-- End of the order form -->
+      </div>
+    </div>
+  </body>
+</html>

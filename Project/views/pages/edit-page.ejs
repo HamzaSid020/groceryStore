@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head'); %>
+
+<body>
+    <div class="container">
+        <%- include('../partials/admin-header'); %>
+
+        <main>
+            <h2>Edit page</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Manage</th>
+                        <th>Manage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% pageTitles.forEach(title => { %>
+                        <tr>
+                            <td><%= title %></td>
+                            <td>
+                                <!-- Edit button (you can handle edit functionality here if needed) -->
+                                <a href="/update-page?title=<%= title %>" class="edit-button">Edit</a>
+                            </td>
+                            <td>
+                                <!-- Delete form -->
+                                <form action="/delete-page" method="post">
+                                    <input type="hidden" name="pageTitle" value="<%= title %>">
+                                    <button type="submit" class="delete-button" <% if (title === 'Home') { %>disabled<% } %>>Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </main>
+        <%- include('../partials/footer'); %>
+    </div>
+</body>
+
+</html>
